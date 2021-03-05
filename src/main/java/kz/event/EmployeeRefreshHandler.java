@@ -1,0 +1,14 @@
+package kz.event;
+
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmployeeRefreshHandler implements ApplicationListener<ContextRefreshedEvent> {
+
+    @Override
+    public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
+        System.out.println("AppContextRefreshHandler.onApplicationEvent");
+    }
+}
